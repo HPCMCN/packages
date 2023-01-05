@@ -8,6 +8,7 @@ import tkinter as tk
 import psutil
 
 
+# noinspection PyUnresolvedReferences
 class NetSpeed(tk.Frame):
     """网速检测"""
 
