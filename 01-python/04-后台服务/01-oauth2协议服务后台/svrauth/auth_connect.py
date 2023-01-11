@@ -22,7 +22,7 @@ class Oauth2Req(object):
         self.grant_type = "authorization_code"
         # 用户登录 oauth2 server 成功后, 需要回调 web 的地址
         self.redirect_uri = "http://127.0.0.1:7000/api/auth/daqun/login/callback/"
-        
+
         self.auth_url = urllib.parse.urljoin(self.oauth_site, "/o/authorize/")
         self.token_url = urllib.parse.urljoin(self.oauth_site, "/o/token/")
         self.test_url = urllib.parse.urljoin(self.oauth_site, "/o/applications/")
