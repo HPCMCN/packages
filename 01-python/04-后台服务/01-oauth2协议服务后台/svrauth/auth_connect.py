@@ -14,12 +14,15 @@ from webdriver_manager.chrome import ChromeDriverManager
 class Oauth2Req(object):
 
     def __init__(self):
+        # oauth server 的hostname信息
         self.oauth_site = "http://127.0.0.1:8000/"
+        # oauth server 分配给 web 的client_id, client_secret, grant_type
         self.client_id = "UPHLWpaC4dYn31R1mCGI3GuFVhyGeg8yd5verM0M"
         self.client_secret = "HIFKpn4xDklni6Ajeby9UgRlsKHbGcBCXNbtZjWtBKeaFSkGJ9MkgSWUg4cf4HLg7zAcxnZxDwXGjgn1NJ4qJmtflxSdC7D9gKjFD6kEYP7wh4s1nKS4uEOh6AU5AO0u"
         self.grant_type = "authorization_code"
         # 用户登录 oauth2 server 成功后, 需要回调 web 的地址
         self.redirect_uri = "http://127.0.0.1:7000/api/auth/daqun/login/callback/"
+        
         self.auth_url = urllib.parse.urljoin(self.oauth_site, "/o/authorize/")
         self.token_url = urllib.parse.urljoin(self.oauth_site, "/o/token/")
         self.test_url = urllib.parse.urljoin(self.oauth_site, "/o/applications/")
