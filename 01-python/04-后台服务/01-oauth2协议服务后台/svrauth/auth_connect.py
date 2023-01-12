@@ -69,7 +69,10 @@ class Oauth2Req(object):
         ).json()
 
     def test_list_application(self, headers):
-        print(requests.get(self.test_url, headers=headers).content)
+        rsp = requests.get(self.test_url, headers=headers)
+        if not str(rsp.status_code).startswith("2"):
+            raise ValueError("请重新执行本脚本一次, 如果还是异常, 可能是配置有问题")
+        print("token 验证通过!")
 
     def start(self):
         """启动中心"""
