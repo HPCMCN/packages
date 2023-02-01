@@ -1,7 +1,0 @@
-django
-# https://django-oauth-toolkit.readthedocs.io/en/1.7.1/getting_started.html#what-is-oauth
-django-oauth-toolkit==1.7.0
-djangorestframework
-
-selenium
-webdriver_manager
