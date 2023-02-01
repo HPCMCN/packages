@@ -1,0 +1,5 @@
+pymysql
+paramiko
+django-environ
+alibabacloud_ecs20140526
+psutil
